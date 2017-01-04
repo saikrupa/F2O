@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/BackGround"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:onClick="ivBack"
+
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:id="@+id/tvReschedulingalerts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+
+            android:text="F2O"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:id="@+id/ivCamera"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.5"
+            android:src="@mipmap/photocamera"
+
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="List of Pictures" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/btnAddphoto"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/login_using_border"
+            android:onClick="btnAddPhoto"
+            android:text="Add Photo" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@mipmap/photos5" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignRight="@+id/imageView2"
+                android:layout_alignTop="@+id/imageView2"
+                android:layout_margin="3dp"
+                android:src="@mipmap/cross" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@mipmap/photos2" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignRight="@+id/imageView5"
+                android:layout_alignTop="@+id/imageView5"
+                android:layout_margin="3dp"
+                android:src="@mipmap/cross" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@mipmap/cons1" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignRight="@+id/imageView3"
+                android:layout_alignTop="@+id/imageView3"
+                android:layout_margin="3dp"
+                android:src="@mipmap/cross" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@mipmap/cons4" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignRight="@+id/imageView6"
+                android:layout_alignTop="@+id/imageView6"
+                android:layout_margin="3dp"
+                android:src="@mipmap/cross" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@mipmap/cons3" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignRight="@+id/imageView4"
+                android:layout_alignTop="@+id/imageView4"
+                android:layout_margin="3dp"
+                android:src="@mipmap/cross" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@mipmap/site1" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignRight="@+id/imageView7"
+                android:layout_alignTop="@+id/imageView7"
+                android:layout_margin="3dp"
+                android:src="@mipmap/cross" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@mipmap/site2" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignRight="@+id/imageView8"
+                android:layout_alignTop="@+id/imageView8"
+                android:layout_margin="3dp"
+                android:src="@mipmap/cross" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

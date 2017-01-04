@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/BackGround"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:onClick="ivBack"
+
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:id="@+id/tvReschedulingalerts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+
+            android:text="F2O"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:id="@+id/ivCamera"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.5"
+            android:src="@mipmap/photocamera"
+
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:text="Property Address:"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <EditText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/login_using_border"
+                    android:cursorVisible="true"
+                    android:hint="Property Address"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_fifteen"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:text="Client Name:"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <EditText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/login_using_border"
+                    android:cursorVisible="true"
+                    android:hint="Client Name"
+                    android:padding="10dp"
+                    android:singleLine="true"
+
+                    android:textSize="@dimen/textsize_fifteen"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:text="Contact No:"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <EditText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/login_using_border"
+                    android:cursorVisible="true"
+                    android:hint="Contact No"
+                    android:padding="10dp"
+                    android:singleLine="true"
+
+                    android:textSize="@dimen/textsize_fifteen"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:text="Email ID:"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/login_using_border"
+                    android:cursorVisible="true"
+                    android:hint="Email ID"
+                    android:padding="10dp"
+                    android:singleLine="true"
+
+                    android:textSize="@dimen/textsize_fifteen"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:text="Bid Received Date:"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <EditText
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/login_using_border"
+                    android:cursorVisible="true"
+                    android:hint="Bid Received Date"
+                    android:padding="10dp"
+                    android:singleLine="true"
+
+                    android:textSize="@dimen/textsize_fifteen"></EditText>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:text="Comments/Remarks:"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hundred"
+                android:layout_margin="8dp"
+                android:background="@drawable/login_using_border"
+                android:hint=" Comments/Remarks "
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_fifteen" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="@dimen/padding_xxsmall"
+                    android:layout_marginRight="@dimen/padding_xxsmall"
+                    android:background="@drawable/login_button_selector"
+                    android:text="Update"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <Button
+
+                    android:id="@+id/btnCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="@dimen/padding_xxsmall"
+                    android:layout_marginRight="@dimen/padding_xxsmall"
+                    android:background="@drawable/clear_button_selector"
+                    android:text="Cancel"
+
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_margin="8dp"
+        android:background="@color/login_pressed"
+        android:padding="10dp"
+        android:text="Info - Fort Worth Bungalow Remodeling"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="@color/black" />
+
+</LinearLayout>

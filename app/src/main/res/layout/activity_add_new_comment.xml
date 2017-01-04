@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fortyfive"
+        android:background="@color/BackGround"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/thirty"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:onClick="ivBack"
+
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:id="@+id/tvReschedulingalerts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+
+            android:text="F2O"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:id="@+id/ivCamera"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/thirty"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.5"
+            android:src="@mipmap/photocamera"
+
+            android:visibility="invisible" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnProjectname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginBottom="10dp"
+            android:background="@color/BackGround"
+            android:padding="10dp"
+            android:text="Forth worth bunglaw - Comments"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/login_pressed"
+                    android:padding="10dp"
+                    android:text="You can select a category, fill a comment and record action taken during this project audit."
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Category : "
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        style="@android:style/Widget.Holo.Light.Spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_margin="8dp"
+                        android:entries="@array/lineitems"
+                        android:padding="5dp"
+                        android:spinnerMode="dialog"
+                        android:textSize="15sp"
+                        android:textColorHint="@color/login_pressed"
+                        android:background="@drawable/icon_input"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Comment : "
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/etComment"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/login_using_border"
+                        android:gravity="top"
+                        android:hint=" Comment "
+                        android:inputType="textMultiLine"
+                        android:layout_margin="8dp"
+                        android:textSize="15sp"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Action Taken: "
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/etActionTaken"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/login_using_border"
+                        android:gravity="top"
+                        android:hint=" Action Taken"
+                        android:inputType="textMultiLine"
+                        android:layout_margin="8dp"
+                        android:textSize="15sp"></EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnUpdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="@dimen/padding_xxsmall"
+                        android:layout_marginRight="@dimen/padding_xxsmall"
+                        android:background="@drawable/login_button_selector"
+                        android:text="Update"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btnCancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="@dimen/padding_xxsmall"
+                        android:layout_marginRight="@dimen/padding_xxsmall"
+                        android:background="@drawable/clear_button_selector"
+                        android:text="Cancel"
+                        android:textAllCaps="false"
+
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fortyfive"
+        android:background="@color/BackGround"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/thirty"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:onClick="ivBack"
+
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:id="@+id/tvReschedulingalerts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+
+            android:text="F2O"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/ivCamera"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/thirty"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.5"
+            android:src="@mipmap/photocamera"
+
+            android:visibility="invisible" />
+    </LinearLayout>
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_margin="8dp"
+                    android:background="@color/BackGround"
+                    android:padding="10dp"
+                    android:text="Inspection - Forth Worth Bungalow Remodelling"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:id="@+id/tvInspectorsname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:singleLine="true"
+                        android:text="Inspector Name : Bharadwaj"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:text="Project Manager : Angad"
+                        android:id="@+id/tvProjectmanager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:text="Superintendent : Navin"
+                        android:id="@+id/tvSuperintendent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:text="Date : 25 nov 2016"/>
+                </LinearLayout>
+                <!-- android:drawableLeft="@mipmap/add"-->
+                <Button
+                    android:id="@+id/btnNewInspection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_margin="8dp"
+                    android:background="@color/login_pressed"
+                    android:padding="10dp"
+                    android:text=" New Inspection"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:visibility="visible"
+                    android:textColor="@color/black" />
+                <LinearLayout
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="#E3F2FD"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvcreateddate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:text="Last Posted : 23 Nov 2106 , 14:25"/>
+
+                    <TextView
+                        android:id="@+id/tvComments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Comments : 2"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvCategories"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Categories : 1/11 |"/>
+
+                        <TextView
+                            android:id="@+id/tvPhotos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Photos : 1"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvSubCategories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Line items : 9/59"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvOk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="OK : 2 |"/>
+                        <TextView
+                            android:id="@+id/tvAct"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Act : 7 |"/>
+                        <TextView
+                            android:id="@+id/tvNa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NA : 4"/>
+                        <TextView
+                            android:id="@+id/tvBlank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Blanl : 50"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvLastupdated"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Last Updated : 16 Nov 2016 , 12:50"/>
+
+                    <TextView
+                        android:id="@+id/tvViewdetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/viewdetails"
+                        android:textColor="@color/blue" />
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <LinearLayout
+            android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+            android:background="@color/BackGround"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:onClick="ivBack"
+
+                android:src="@mipmap/back"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tvReschedulingalerts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+
+                android:text="F2O"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+            <ImageView
+                android:id="@+id/ivCamera"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.5"
+                android:src="@mipmap/photocamera"
+
+                android:visibility="invisible" />
+        </LinearLayout>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/BackGround"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            android:background="#FFFFFF"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+</android.support.design.widget.CoordinatorLayout>

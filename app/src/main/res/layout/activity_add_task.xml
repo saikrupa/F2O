@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/fortyfive"
+        android:background="@color/BackGround"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/thirty"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.5"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:onClick="ivBack"
+
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:id="@+id/tvReschedulingalerts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+
+            android:text="F2O"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:id="@+id/ivCamera"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/thirty"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.5"
+            android:src="@mipmap/photocamera"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:layout_margin="8dp"
+                    android:text="Category :"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/forty"
+
+                   android:layout_margin="8dp"
+                    android:background="@drawable/icon_input"
+                    android:entries="@array/selectcategory"
+                    android:padding="5dp"></Spinner>
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                  android:layout_margin="8dp"
+                    android:text="Task :"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/forty"
+                    android:layout_margin="8dp"
+
+                    android:background="@drawable/login_using_border"
+                    android:gravity="left"
+                    android:hint="Task"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:layout_margin="8dp"
+                    android:text="Description :"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/hundred"
+                    android:layout_margin="8dp"
+
+                    android:background="@drawable/login_using_border"
+                    android:gravity="top"
+
+                    android:hint="Description"
+
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="Quantity :"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/forty"
+                    android:layout_margin="8dp"
+
+                    android:background="@drawable/icon_input"
+                    android:entries="@array/unit"
+                    android:padding="5dp"></Spinner>
+
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:layout_margin="8dp"
+                    android:text="Units : "
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/forty"
+                    android:layout_margin="8dp"
+
+                    android:background="@drawable/login_using_border"
+                    android:gravity="left"
+                    android:hint="Enter value"
+
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:layout_margin="8dp"
+                    android:text="Price :  $"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/forty"
+                    android:layout_margin="8dp"
+
+                    android:background="@drawable/login_using_border"
+                    android:gravity="top"
+                    android:hint="Enter value"
+                    android:padding="10dp"
+
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+
+
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                   android:layout_margin="8dp"
+                    android:text="Total : "
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/forty"
+                    android:layout_margin="8dp"
+
+                    android:background="@drawable/login_using_border"
+                    android:gravity="left"
+                    android:hint="Enter value"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+
+
+                    android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="@dimen/padding_xxsmall"
+                    android:layout_marginRight="@dimen/padding_xxsmall"
+                    android:background="@drawable/login_button_selector"
+                    android:onClick="btnUpdate"
+                    android:text="Update"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btnApply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="@dimen/padding_xxsmall"
+                    android:layout_marginRight="@dimen/padding_xxsmall"
+                    android:background="@drawable/clear_button_selector"
+                    android:onClick="btnCancel"
+                    android:text="Cancel"
+
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

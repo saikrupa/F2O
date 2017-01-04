@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="8dp"
+        android:text="Welcome James , here is the list of active projects"
+        android:textColor="#000"
+        android:textSize="15sp" />
+
+    <SearchView
+        android:id="@+id/svProjectName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/edittext_round_corners"
+        android:ems="10"
+        android:textSize="5sp"></SearchView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#e9e9e9"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@mipmap/site1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp">
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:paddingTop="5dp"
+                        android:singleLine="true"
+                        android:text="Fort Worth Bungalow Remodeling"
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginBottom="4dp"
+                        android:singleLine="true"
+                        android:text="Progress: 69%"
+                        android:textSize="15sp" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:singleLine="true"
+                        android:text="End Date: 08/15/2016"
+                        android:textSize="15sp" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:singleLine="true"
+                        android:text="Last update: 06/15/2016"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:singleLine="true"
+                        android:text="SubContractor: Kevin"
+                        android:textSize="15sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#e9e9e9"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/s1info"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="1dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/blue_stoke"
+                        android:text="Info"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:visibility="visible" />
+
+
+
+
+                    <Button
+                        android:id="@+id/s1updates"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="1dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/blue_stoke"
+                        android:text="Updates"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/s1inspections"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="1dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/blue_stoke"
+                        android:text="Inspections"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:visibility="visible" />
+                    <Button
+                        android:id="@+id/s1photos"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="1dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/blue_stoke"
+                        android:text="Photos"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#e9e9e9"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@mipmap/site2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp">
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:paddingTop="5dp"
+                        android:singleLine="true"
+                        android:text="Wisper Valley"
+                        android:textColor="#000"
+                        android:textSize="18sp" />
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginBottom="4dp"
+                        android:singleLine="true"
+                        android:text="Progress: 46%"
+                        android:textSize="15sp" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:singleLine="true"
+                        android:text="End Date: 09/19/2016"
+                        android:textSize="15sp" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:singleLine="true"
+                        android:text="Last update: 06/15/2016"
+                        android:textSize="15sp" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:singleLine="true"
+                        android:text="SubContractor: James"
+                        android:textSize="15sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#e9e9e9"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/s2info"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="1dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/blue_stoke"
+                        android:text="Info"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:visibility="visible" />
+
+
+
+
+                    <Button
+                        android:id="@+id/s2updates"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="1dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/blue_stoke"
+                        android:text="Updates"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/s2inspections"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="1dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/blue_stoke"
+                        android:text="Inspections"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:visibility="visible" />
+                    <Button
+                        android:id="@+id/s2photos"
+                        android:layout_width="0dp"
+                        android:layout_height="25dp"
+                        android:layout_margin="0.5dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/blue_stoke"
+                        android:text="Photos"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/white" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/white" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

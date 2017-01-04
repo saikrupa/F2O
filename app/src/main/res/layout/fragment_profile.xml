@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="120dp">
+
+        <ImageView
+            android:id="@+id/ivUploadimage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/five"
+            android:layout_marginBottom="@dimen/eighty"
+            android:src="@mipmap/patient_signup"/>
+
+
+        <ImageView
+            android:layout_width="@dimen/twenty"
+            android:layout_height="@dimen/twenty"
+            android:layout_alignTop="@+id/ivUploadimage"
+            android:layout_margin="@dimen/five"
+            android:layout_toRightOf="@+id/ivUploadimage"
+            android:src="@mipmap/change_photo" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/btnChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_marginTop="@dimen/six"
+            android:background="@drawable/login_button_selector"
+            android:text="Change Password"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_fifteen" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_marginTop="@dimen/six"
+            android:background="@drawable/red_btnbackground_selector"
+            android:text="Log out"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_fifteen" />
+
+        <EditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_marginTop="@dimen/six"
+            android:background="@drawable/login_using_border"
+            android:cursorVisible="true"
+            android:drawableLeft="@mipmap/email"
+            android:drawablePadding="@dimen/padding_xxsmall"
+            android:hint="Email"
+            android:padding="@dimen/padding_small"
+            android:singleLine="true"
+            android:textSize="@dimen/textsize_fifteen"></EditText>
+
+        <EditText
+            android:id="@+id/etPhoneno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_marginTop="@dimen/six"
+            android:background="@drawable/login_using_border"
+            android:cursorVisible="true"
+            android:drawableLeft="@mipmap/profile_phone"
+            android:drawablePadding="@dimen/padding_xxsmall"
+            android:hint="Phone no"
+            android:inputType="phone"
+            android:maxLength="12"
+            android:padding="@dimen/padding_small"
+            android:singleLine="true"
+            android:textSize="@dimen/textsize_fifteen"></EditText>
+
+
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_marginTop="@dimen/six"
+            android:background="@drawable/login_using_border"
+            android:cursorVisible="true"
+            android:drawableLeft="@mipmap/address"
+            android:drawablePadding="@dimen/padding_xxsmall"
+            android:hint="Address"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/padding_small"
+            android:singleLine="true"
+            android:textSize="@dimen/textsize_fifteen"></EditText>
+
+
+        <Button
+            android:id="@+id/btnSavechanges"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/ten"
+            android:layout_marginRight="@dimen/ten"
+            android:layout_marginTop="@dimen/six"
+            android:background="@drawable/signup_button_selector"
+            android:text="Save Changes"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_fifteen" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">F2O</string>
+    <string name="font_fontFamily_medium">sans-serif</string>
+    <string name="Search">Search Projects</string>
+    <string-array name="qty">
+        <item>Quantity</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+    </string-array>
+    <string-array name="unit">
+        <item>Unit</item>
+        <item>Sq/ft</item>
+        <item>Sq</item>
+        <item>Liter</item>
+        <item>mm</item>
+        <item>cm</item>
+        <item>ea</item>
+    </string-array>
+    <string-array name="update">
+        <item>Line items</item>
+        <item>Done</item>
+        <item>Progress</item>
+        <item>Pending</item>
+        <item>Intiated</item>
+
+    </string-array>
+    <string-array name="selectcategory">
+        <item>Select Category</item>
+        <item>Reo services</item>
+        <item>Investment rehab services</item>
+        <item>Roofing</item>
+        <item>Sliding</item>
+        <item>Garage</item>
+
+
+    </string-array>
+    <string-array name="selectsubcategory">
+        <item>Select Sub Category</item>
+        <item>Ceiling light fixture</item>
+        <item>Purchase transactions</item>
+        <item>Sliding Door</item>
+        <item>Remote Control</item>
+        <item>Slider</item>
+
+    </string-array>
+
+
+    <string name="uploadimage"><b>Click to browse Image</b></string>
+    <string name="viewdetails"><u>View Task details</u></string>
+
+    <string-array name="lineitems">
+        <item> Select </item>
+        <item>1 Erosion Control Inspection Item </item>
+        <item>2 General Safety Practices</item>
+        <item>3 Utilities</item>
+        <item>4 Housekeeping</item>
+        <item>5 Fire Protection</item>
+        <item>6 Excavation and Trenching</item>
+        <item>7 Fall Protection</item>
+        <item>8 Equipment – Cranes, Loaders, Forklifts, etc.</item>
+        <item>9 Scaffold</item>
+        <item>10 Tools and Equipment</item>
+        <item>11 Subcontractor Safety</item>
+    </string-array>
+
+
+    <string-array name="Electrical">
+        <item>Lock at Meter</item>
+
+    </string-array>
+    <string-array name="Gas">
+        <item>On</item>
+    </string-array>
+    <string-array name="Meter">
+        <item>N/A</item>
+    </string-array>
+    <string-array name="Roof">
+        <item>Clerestory</item>
+    </string-array>
+    <string-array name="Hvac">
+        <item>Split</item>
+    </string-array>
+    <string-array name="Septic">
+        <item>Yes</item>
+    </string-array>
+    <string-array name="Well">
+        <item>N/A</item>
+    </string-array>
+
+
+
+    <string-array name="selectCategory">
+        <item>SelectCategory</item>
+        <item>Exterior</item>
+        <item>Interior</item>
+    </string-array>
+    <string-array name="Status">
+        <item>Select Status</item>
+        <item>Approved</item>
+        <item>Initiated</item>
+        <item>On Hold</item>
+        <item>Cancelled</item>
+        <item>In Progress</item>
+        <item>Completed</item>
+    </string-array>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="btn_sign_up">Login</string>
+    <string name="forgotpassword"><u>Forgot Password</u></string>
+
+</resources>

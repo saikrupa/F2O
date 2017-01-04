@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewUpdateActivity">
+
+   <!-- <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_menu_camera" />-->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/BackGround"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:onClick="ivBack"
+
+                android:src="@mipmap/back" />
+
+            <TextView
+                android:id="@+id/tvReschedulingalerts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:padding="5dp"
+
+                android:text="F2O"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+            <ImageView
+                android:id="@+id/ivCamera"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.5"
+                android:src="@mipmap/photocamera"
+
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@color/login"
+            android:padding="10dp"
+            android:text="Updates - Fort Worth Bungalow Remodeling"
+            android:textColor="@color/white" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- <TextView
+                     android:id="@+id/liUpdatePro2"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="8dp"
+                     android:background="@color/login_pressed"
+                     android:padding="10dp"
+                     android:text="+ Add Update"
+                     android:textColor="@color/black"
+                     android:onClick="tvAddupdate"/>-->
+
+                <LinearLayout
+                    android:id="@+id/liUpdatePro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Task"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_fifteen"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                    <EditText
+                        android:lines="2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/login_using_border"
+                        android:gravity="top"
+                        android:hint=" Task "
+                        android:padding="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_fifteen"/>
+                     <ImageView
+                         android:id="@+id/ivPhotos"
+                         android:layout_width="50dp"
+                         android:layout_height="50dp"
+                         android:src="@android:drawable/ic_menu_camera"
+                         android:gravity="center"
+                         android:padding="@dimen/eight"
+                         android:onClick="ivPhotos"
+                         android:layout_gravity="center_vertical"
+                         android:background="@drawable/circle"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:onClick="txtViewdetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="@string/viewdetails"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/textsize_fifteen"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Status "
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_fifteen"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/icon_input"
+                        android:entries="@array/Status"></Spinner>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Comments"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_fifteen"/>
+
+                    <EditText
+                        android:lines="4"
+                        android:padding="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/login_using_border"
+                        android:gravity="top"
+                        android:hint=" Comments "
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_fifteen"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:text="Completion"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_fifteen"/>
+
+                    <EditText
+                        android:lines="2"
+                        android:padding="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/login_using_border"
+                        android:gravity="top"
+                        android:hint=" Completion "
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_fifteen"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnReset"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="@dimen/padding_xxsmall"
+                            android:layout_marginRight="@dimen/padding_xxsmall"
+                            android:background="@drawable/login_button_selector"
+                            android:text="Update"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <Button
+                            android:id="@+id/btnApply"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="@dimen/padding_xxsmall"
+                            android:layout_marginRight="@dimen/padding_xxsmall"
+                            android:background="@drawable/clear_button_selector"
+                            android:text="Cancel"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
