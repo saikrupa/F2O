@@ -64,7 +64,7 @@ public class Others {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            Log.v("response", response.toString());
+                            Log.v("commit Checking", response.toString());
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
