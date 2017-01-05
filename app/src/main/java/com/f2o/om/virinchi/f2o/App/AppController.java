@@ -63,5 +63,7 @@ public class AppController extends MultiDexApplication {
             mRequestQueue.cancelAll(tag);
         }
     }*/
-
+   public void setConnectivityListener(NetworkStateReceiver.ConnectivityReceiverListener listener) {
+       NetworkStateReceiver.connectivityReceiverListener = listener;
+   }
 }

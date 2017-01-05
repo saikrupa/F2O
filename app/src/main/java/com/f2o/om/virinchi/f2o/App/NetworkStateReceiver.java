@@ -13,21 +13,33 @@ import android.widget.Toast;
  */
 
 public class NetworkStateReceiver extends BroadcastReceiver {
-    public void onReceive(Context context, Intent intent) {
-        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
-        if (activeNetwork != null) { // connected to the internet
-            if (activeNetwork.getType() == ConnectivityManager.TYPE_WIFI) {
-                // connected to wifi
-                Toast.makeText(context, activeNetwork.getTypeName(), Toast.LENGTH_SHORT).show();
-            } else if (activeNetwork.getType() == ConnectivityManager.TYPE_MOBILE) {
-                // connected to the mobile provider's data plan
-                Toast.makeText(context, activeNetwork.getTypeName(), Toast.LENGTH_SHORT).show();
-            }
-        } else {
-            // not connected to the internet
-            Toast.makeText(context, "not Connected", Toast.LENGTH_SHORT).show();
+    public static ConnectivityReceiverListener connectivityReceiverListener;
 
+    public NetworkStateReceiver() {
+        super();
+    }
+
+    @Override
+    public void onReceive(Context context, Intent arg1) {
+        ConnectivityManager cm = (ConnectivityManager) context
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        boolean isConnected = activeNetwork != null
+                && activeNetwork.isConnectedOrConnecting();
+
+        if (connectivityReceiverListener != null) {
+            connectivityReceiverListener.onNetworkConnectionChanged(isConnected);
         }
+    }
+
+    public static boolean isConnected() {
+        ConnectivityManager cm = (ConnectivityManager) AppController.getInstance().getApplicationContext()
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        return activeNetwork != null
+                && activeNetwork.isConnectedOrConnecting();
+    }
+    public interface ConnectivityReceiverListener {
+        void onNetworkConnectionChanged(boolean isConnected);
     }
 }

@@ -3,6 +3,9 @@ package com.f2o.om.virinchi.f2o;
 import android.content.Intent;
 
 import com.daimajia.androidanimations.library.Techniques;
+import com.f2o.om.virinchi.f2o.App.AppController;
+import com.f2o.om.virinchi.f2o.App.NetworkStateReceiver;
+import com.f2o.om.virinchi.f2o.Others.Others;
 import com.viksaa.sssplash.lib.activity.AwesomeSplash;
 import com.viksaa.sssplash.lib.cnst.Flags;
 import com.viksaa.sssplash.lib.model.ConfigSplash;
@@ -10,16 +13,16 @@ import com.viksaa.sssplash.lib.model.ConfigSplash;
 /**
  * Created by Virinchi on 11/24/2016.
  */
-public class SplashActivity extends AwesomeSplash {
+public class SplashActivity extends AwesomeSplash implements NetworkStateReceiver.ConnectivityReceiverListener{
     //DO NOT OVERRIDE onCreate()!
     //if you need to start some services do it in initSplash()!
 
-
+    Others others;
     @Override
     public void initSplash(ConfigSplash configSplash) {
 
             /* you don't have to override every property */
-
+        others=new Others(SplashActivity.this);
         //Customize Circular Reveal
         configSplash.setBackgroundColor(R.color.BackGround); //any color you want form colors.xml
         configSplash.setAnimCircularRevealDuration(2000); //int ms
@@ -56,10 +59,25 @@ public class SplashActivity extends AwesomeSplash {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        AppController.getInstance().setConnectivityListener(this);
+    }
+
+    @Override
     public void animationsFinished() {
         Intent i  = new Intent(getApplicationContext() , LoginActivity.class);
         startActivity(i);
         //transit to another activity here
         //or do whatever you want
+    }
+
+    @Override
+    public void onNetworkConnectionChanged(boolean isConnected) {
+        if(isConnected){
+            others.serverCalMain();
+        }else {
+
+        }
     }
 }
