@@ -1,6 +1,7 @@
 package com.f2o.om.virinchi.f2o;
 
 import android.content.Intent;
+import android.widget.Toast;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.f2o.om.virinchi.f2o.App.AppController;
@@ -54,10 +55,18 @@ public class SplashActivity extends AwesomeSplash implements NetworkStateReceive
         configSplash.setTitleTextSize(30f); //float value
         configSplash.setAnimTitleDuration(3000);
         configSplash.setAnimTitleTechnique(Techniques.FlipInX);
+        checkConnection();
        // configSplash.setTitleFont("fonts/myfont.ttf"); //provide string to your font located in assets/fonts/
 
     }
-
+    private void checkConnection() {
+        boolean isConnected = NetworkStateReceiver.isConnected();
+        if(isConnected){
+            others.serverCalMain();
+        }else {
+            Toast.makeText(getApplicationContext(),"offline",Toast.LENGTH_SHORT).show();
+        }
+    }
     @Override
     protected void onResume() {
         super.onResume();
@@ -77,7 +86,7 @@ public class SplashActivity extends AwesomeSplash implements NetworkStateReceive
         if(isConnected){
             others.serverCalMain();
         }else {
-
+            Toast.makeText(getApplicationContext(),"offline",Toast.LENGTH_SHORT).show();
         }
     }
 }

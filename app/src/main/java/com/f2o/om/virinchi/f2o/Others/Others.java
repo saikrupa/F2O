@@ -31,6 +31,10 @@ public class Others {
     public Others(Context context){
         _context=context;
         db=new DatabaseHandler(context);
+        List<String> data=db.getAllPayables();
+        for(String names:data){
+            Log.v("testing",names);
+        }
     }
 
     public void serverCalMain(){
@@ -61,7 +65,6 @@ public class Others {
                     public void onResponse(JSONObject response) {
                         try {
                             Log.v("response", response.toString());
-
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
