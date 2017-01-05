@@ -29,7 +29,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     // Contacts Table Columns names
 
     private static final String KEY_FNAME = "firstName";
-
+    private static final String KEY_IS_SENT = "isSent";
 
 
     public DatabaseHandler(Context context) {
@@ -42,7 +42,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         // table query
         String CREATE_PAYABLE_TABLE = "CREATE TABLE " + TABLE_PAYABLE + "("
-                + KEY_FNAME + " TEXT" + ")";
+                + KEY_FNAME + " TEXT," +KEY_IS_SENT+" TEXT"+ ")";
 
         // execute query
         Log.v("query", CREATE_PAYABLE_TABLE);
@@ -62,11 +62,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
 
     // Adding new contact
-    public void addPayable(String name) {
+    public void addPayable(String name,String isSent) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
         values.put(KEY_FNAME, name); // Contact First Name
+        values.put(KEY_IS_SENT,isSent);
         db.insert(TABLE_PAYABLE, null, values);
         db.close(); // Closing database connection
         }
@@ -76,6 +77,37 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         List<String> payerList = new ArrayList<String>();
         // Select All Query
         String selectQuery = "SELECT  * FROM " + TABLE_PAYABLE;
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                // Adding contact to list
+                payerList.add(cursor.getString(0));
+            } while (cursor.moveToNext());
+        }
+
+        // return contact list
+        return payerList;
+    }
+
+    // Getting single contact
+    public List<String> getPayable(String key) {
+        /*SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.query(TABLE_PAYABLE, new String[]{KEY_FNAME}, KEY_USER_ID + "=?",
+                new String[]{String.valueOf(id)}, null, null, null, null);
+        if (cursor != null)
+            cursor.moveToFirst();
+        String[] data = {cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5), cursor.getString(6)};
+        AddPayableHelper payableHelper = new AddPayableHelper(cursor.getString(0), data);
+        // return contact
+        return payableHelper;*/
+        List<String> payerList = new ArrayList<>();
+        // Select All Query
+        String selectQuery = "SELECT  * FROM " + TABLE_PAYABLE+" WHERE "+KEY_IS_SENT+"='"+key+"'";
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);

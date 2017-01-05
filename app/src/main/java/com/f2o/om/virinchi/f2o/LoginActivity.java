@@ -38,6 +38,7 @@ public class LoginActivity extends Activity {
     private Button btnSignUp,btn_check;
     DatabaseHandler db;
     String url="http://samplewebapi.optionmatrix.org/api/values/SampleDataPost";
+    int i=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,16 +59,32 @@ public class LoginActivity extends Activity {
                 /*Intent i = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);*/
                 String email=inputEmail.getText().toString();
-                db.addPayable(email);
-                sendDataToServer(email);
+                String isSent;
+                i++;
+                i=i%2;
+                if(i==0)
+                    isSent="Yes";
+                else
+                    isSent="No";
+
+                db.addPayable(email,isSent);
+               // sendDataToServer(email);
             }
         });
         btn_check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 List<String> data=db.getAllPayables();
+                List<String> dataYes=db.getPayable("Yes");
+                List<String> dataNo=db.getPayable("No");
                 for(String names:data){
                     Log.v("testing",names);
+                }
+                for(String names:dataYes){
+                    Log.v("testing Yes",names);
+                }
+                for(String names:dataNo){
+                    Log.v("testing No",names);
                 }
             }
         });

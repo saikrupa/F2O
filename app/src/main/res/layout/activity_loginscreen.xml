@@ -116,7 +116,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:background="@color/colorPrimary"
-            android:text="@string/btn_sign_up"
+            android:text="Add"
             android:textColor="@android:color/white" />
         <Button
             android:id="@+id/btn_check"
